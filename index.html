@@ -14,7 +14,7 @@ d3.csv("https://dl.dropboxusercontent.com/s/9l8b6ukvvcrwp3u/hours.csv", function
   console.log(csv)
   var chart1 = calendarHeatmap()
                 .data(csv)
-                .selector('body')
+                .selector('#chart')
                 .colorRange(['#D8E6E7', '#218380'])
                 .startDate(new Date(2018, 0, 1))
                 .tooltipEnabled(true)
@@ -33,3 +33,5 @@ d3.csv("https://dl.dropboxusercontent.com/s/9l8b6ukvvcrwp3u/hours.csv", function
 });
 
 </script>
+<p>Practice Hours</p>
+<div id="chart"></div>
