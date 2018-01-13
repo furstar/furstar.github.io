@@ -11,7 +11,6 @@ d3.csv("https://dl.dropboxusercontent.com/s/9l8b6ukvvcrwp3u/hours.csv", function
     csv[i].count = parseFloat(csv[i].hours)
   }
 
-  console.log(csv)
   var chart1 = calendarHeatmap()
                 .data(csv)
                 .selector('#chart')
@@ -25,10 +24,7 @@ d3.csv("https://dl.dropboxusercontent.com/s/9l8b6ukvvcrwp3u/hours.csv", function
                     {min: 2, max: 'Infinity', unit: 'hours'}
                   ]
                 )
-                .colorRange(['#E2EDE6', '#3E606F'])
-                .onClick(function (data) {
-                  console.log('onClick callback. Data:', data);
-                });
+                .colorRange(['#E2EDE6', '#3E606F']);
   chart1();  // render the chart
 });
 
