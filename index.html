@@ -5,7 +5,7 @@
 <link rel="stylesheet" type="text/css" href="calendar-heatmap.css">
 <script src="calendar-heatmap.js"></script>
 <script>
-d3.csv("https://dl.dropboxusercontent.com/s/9l8b6ukvvcrwp3u/hours.csv", function(error, csv) {
+d3.csv("https://dl.dropboxusercontent.com/s/kz5ti99k2z7j10p/hours.csv", function(error, csv) {
   for(var i = 0; i < csv.length; i++){
     csv[i].date = moment(csv[i].date).toDate();
     csv[i].count = parseFloat(csv[i].hours)
